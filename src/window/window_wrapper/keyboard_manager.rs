@@ -39,7 +39,8 @@ impl KeyboardManager {
             } => {
                 // When window is just focused or lost it's focus, ignore keyboard events
                 // that were submitted this frame
-                self.ignore_input_this_frame = true;
+                // TODO: disabled for testing purposes. What is this about anyway?
+                self.ignore_input_this_frame = false;
             }
             Event::WindowEvent {
                 event:
